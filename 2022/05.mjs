@@ -38,7 +38,6 @@ for (let i = 1; i <= numStacks; i++) {
 
 // Process moves (part 2)
 moveLines.forEach((line) => {
-  debugger;
   let [, num, from, to] = line.match(/move (\d+) from (\d+) to (\d+)/);
   let crate = stacks[from].splice(stacks[from].length - num);
   stacks[to].push(...crate);
